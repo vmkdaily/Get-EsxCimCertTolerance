@@ -4,13 +4,14 @@ Function Get-EsxCimCertTolerance {
 
     <#
         .SYNOPSIS
-            Tests the client's ability to connect to ESX and return CIM hardware results using PowerCLI.
+            Tests the client's ability to connect to ESX and return CIM hardware results using PowerCLI. Requires
+            connection to vCenter.
 
         .DESCRIPTION
-            Tests the client's ability to connect to ESX and return CIM hardware results using PowerCLI.
-            Iterates through all possible parameter sets of Set-PowerCLIConfiguration and
-            Get-VMHostHardware which together create the union of effective certificate
-            requirements to successfully return CIM results.
+            Tests the client's ability to connect to ESX and return CIM hardware results using PowerCLI. Requires
+            connection to vCenter.  Iterates through all possible parameter sets of Set-PowerCLIConfiguration and
+            Get-VMHostHardware which together create the union of effective certificate requirements to successfully
+            return CIM results.
 
             For pure object access, save to a variable:
             $report = <your command>.  For even greater detail, see the PassThru parameter.
