@@ -112,9 +112,7 @@ Function Get-EsxCimCertTolerance {
 
         .PARAMETER ShowError
             Switch. Returns the CIM error experienced.  Since the error is always the same we only return the error
-            once at the end of the run.  To get obnoxious level logging you can activate the ExhaustivelyReturnErrors
-            bool located in the Begin block (not recommended), or review the contents of the object in PassThru mode
-            which returns an Error object for each CIM scenario attempted.
+            once at the end of the run.
 
         .PARAMETER PassThru
             Switch.  Activate this switch to get the entire object results including PowerShell version, PowerCLI version, OS version, etc.
