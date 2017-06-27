@@ -56,10 +56,10 @@ Function Get-EsxCimCertTolerance {
             The host we connect to is not important since this is a client side issue.  As such, we choose a random
             ESX host.
             
-            Select the desired test by populating the TypeType parameter (Basic, Advanced, All). For a basic test, the script will iterate through all
-            possible options of 'Set-PowerCLIConfiguration -InvalidCertificateAction'. The TestType of Advanced performs the
-            basic test and also iterates though Get-VMHostHardware parameters related to suppressing cert warnings.
-            The TestType of All runs both the Simple and Advanced tests and is the default.
+            Select the desired test by populating the TypeType parameter (Simple or Advanced).  The default is Advanced.
+            The Simple test iterates through all possible options of 'Set-PowerCLIConfiguration -InvalidCertificateAction'.
+            The TestType of Advanced performs the Simple test and also iterates though Get-VMHostHardware parameters related to
+            suppressing cert warnings.
             
         TESTING RESULTS
             Understand that the error is returned in all cases.  What you can control is how the system reacts to such failed CIM requests.
