@@ -1,6 +1,9 @@
 # Get-EsxCimCertTolerance
 Gets a list of valid options that can be used to return CIM hardware results with PowerCLI.
 
+## Supporting Blog Post
+http://vmkdaily.ghost.io/test-access-to-esx-cim-from-powercli/
+
 ## Dot Source the function
 
     PS C:\> . C:\temp\Get-EsxCimCertTolerance.ps1
