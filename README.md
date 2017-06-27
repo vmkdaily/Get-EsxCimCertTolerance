@@ -117,4 +117,61 @@ PS C:\>
         The SSL certificate is signed by an unknown certificate authority.
 ```
 
+## Verbose Example
+
+```
+PS C:\> Get-EsxCimCertTolerance -Server vcva02.lab.local -Verbose
+VERBOSE: Attempting to connect using SSPI
+VERBOSE: Reversely resolved 'vcva02.lab.local' to 'vcva02'
+VERBOSE: SSPI Kerberos: Acquired credentials for user 'LAB\vmadmin'
+VERBOSE: SSPI Kerberos: Successful call to InitializeSecurityContext for target 'host/vcva02'
+VERBOSE: Connected successfully using SSPI
+VERBOSE: 6/27/2017 5:22:22 PM Get-PowerCLIVersion Started execution
+VERBOSE: 6/27/2017 5:22:22 PM Get-PowerCLIVersion Finished execution
+VERBOSE: Running on Windows 6.3.9600.0
+VERBOSE: Running VMware PowerCLI 6.5.1 build 5377412, on PowerShell 5.1.14409.1005
+VERBOSE: Running vCenter 6.5.0 and ESX 6.0.0 Build 3825889
+VERBOSE: ------------------
+VERBOSE:  Advanced Test
+VERBOSE: ------------------
+VERBOSE: // For each InvalidCertificateAction parameter of Set-PowerCLIConfiguration,
+VERBOSE: // try all possible suppress switches of Get-VMHostHardware.
+VERBOSE: Option of Fail with WaitForAllData failed.
+VERBOSE: Option of Fail with SkipCACheck failed.
+VERBOSE: Option of Fail with SkipCNCheck failed.
+VERBOSE: Option of Fail with SkipRevocationCheck failed.
+VERBOSE: Succeeded using option of Fail with SkipAllSslCertificateChecks!
+VERBOSE: @{VMHost=esx01.lab.local; MemorySlotCount=4}
+VERBOSE: Succeeded using option of Ignore with WaitForAllData!
+VERBOSE: @{VMHost=esx01.lab.local; MemorySlotCount=4}
+VERBOSE: Succeeded using option of Ignore with SkipCACheck!
+VERBOSE: @{VMHost=esx04.lab.local; MemorySlotCount=4}
+VERBOSE: Succeeded using option of Ignore with SkipCNCheck!
+VERBOSE: @{VMHost=esx02.lab.local; MemorySlotCount=4}
+VERBOSE: Succeeded using option of Ignore with SkipRevocationCheck!
+VERBOSE: @{VMHost=esx01.lab.local; MemorySlotCount=4}
+VERBOSE: Succeeded using option of Ignore with SkipAllSslCertificateChecks!
+VERBOSE: @{VMHost=esx04.lab.local; MemorySlotCount=4}
+VERBOSE: Option of Prompt with WaitForAllData failed.
+VERBOSE: Option of Prompt with SkipCACheck failed.
+VERBOSE: Option of Prompt with SkipCNCheck failed.
+VERBOSE: Option of Prompt with SkipRevocationCheck failed.
+VERBOSE: Succeeded using option of Prompt with SkipAllSslCertificateChecks!
+VERBOSE: @{VMHost=esx03.lab.local; MemorySlotCount=4}
+VERBOSE: Option of Unset with WaitForAllData failed.
+VERBOSE: Option of Unset with SkipCACheck failed.
+VERBOSE: Option of Unset with SkipCNCheck failed.
+VERBOSE: Option of Unset with SkipRevocationCheck failed.
+VERBOSE: Succeeded using option of Unset with SkipAllSslCertificateChecks!
+VERBOSE: @{VMHost=esx02.lab.local; MemorySlotCount=4}
+VERBOSE: Option of Warn with WaitForAllData failed.
+VERBOSE: Option of Warn with SkipCACheck failed.
+VERBOSE: Option of Warn with SkipCNCheck failed.
+VERBOSE: Option of Warn with SkipRevocationCheck failed.
+VERBOSE: Succeeded using option of Warn with SkipAllSslCertificateChecks!
+VERBOSE: @{VMHost=esx03.lab.local; MemorySlotCount=4}
+VERBOSE: 6/27/2017 5:22:35 PM Disconnect-VIServer Started execution
+VERBOSE: 6/27/2017 5:22:35 PM Disconnect-VIServer Finished execution
+```
+
 -end-
